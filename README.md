@@ -8,6 +8,11 @@ In the project, Flutter technologies were used to build the mobile application.
 Supabase was also used, a tool with the possibility of creating Postgres database, authentication services and generating APIs instantly.
 Consuming the data present in my database in Supabase, I can display it using Flutter
 
+My database contains all the necessary information
+
+![image](https://github.com/beatrizgomees/app-haikyuu/assets/150337944/3c85d538-6510-46cb-bbd6-c2f18d6c09c3)
+
+
 I have a structure consisting of:
 
 
