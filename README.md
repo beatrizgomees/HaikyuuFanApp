@@ -32,6 +32,7 @@ Application screens:
 
 <img height="500" src="https://github.com/beatrizgomees/app-haikyuu/assets/150337944/37255d39-b568-49fb-90d7-6f74ee84c680" />
 <img height="500" src="https://github.com/beatrizgomees/app-haikyuu/assets/150337944/13187cfd-ccc8-4b27-9727-d09db836e2e3" />
+<img height="500" src= "https://github.com/beatrizgomees/app-haikyuu/assets/150337944/3d81c628-c074-4928-b20f-d07540fcac21"/>
 
 
 Technologies:
