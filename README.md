@@ -14,10 +14,13 @@ I have a structure consisting of:
 ![image](https://github.com/beatrizgomees/app-haikyuu/assets/150337944/57250136-d603-4759-9393-bb06e86918bc)
 
 
-My components, components where the components and sections of the application will be located
-The domain folder where the application entities are placed and the repository, where I build my functions
-The shared folder where I place everything that is shared within the application, which can always be reused, such as constants, themes, design and widgets
-The views folder where the application screens are located.
+    My components, components where the components and sections of the application will be located
+
+    The domain folder where the application entities are placed and the repository, where I build my functions
+
+    The shared folder where I place everything that is shared within the application, which can always be reused, such as constants, themes, design and widgets
+
+    The views folder where the application screens are located.
 
 Application screens: 
 
