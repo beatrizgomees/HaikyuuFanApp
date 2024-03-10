@@ -2,7 +2,7 @@
 
 A flutter project made for fans of the anime Haikyuu
 
-## Getting Started
+## 
 
 In the project, Flutter technologies were used to build the mobile application.
 Supabase was also used, a tool with the possibility of creating Postgres database, authentication services and generating APIs instantly.
