@@ -1,13 +1,20 @@
 import 'package:app_haikyuu/src/layers/domain/entities/player.dart';
-import 'package:app_haikyuu/src/layers/domain/repository/home_repository_imp.dart';
+import 'package:app_haikyuu/src/layers/domain/repository/player_repository_imp.dart';
 import 'package:flutter/material.dart';
 
-class HobbieImageWidget extends StatelessWidget {
+class HobbieImageWidget extends StatefulWidget {
   String playerName;
   int numberHobbie;
   HobbieImageWidget(
       {super.key, required this.playerName, required this.numberHobbie});
+
+  @override
+  State<HobbieImageWidget> createState() => _HobbieImageWidgetState();
+}
+
+class _HobbieImageWidgetState extends State<HobbieImageWidget> {
   PlayerRepositoryImp playersRepositoryImp = PlayerRepositoryImp();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +22,8 @@ class HobbieImageWidget extends StatelessWidget {
       child: Image.network(
         width: 80,
         height: 100,
-        playersRepositoryImp.urlImageHobbies(playerName, numberHobbie),
+        playersRepositoryImp.urlImageHobbies(
+            widget.playerName, widget.numberHobbie),
       ),
     );
   }

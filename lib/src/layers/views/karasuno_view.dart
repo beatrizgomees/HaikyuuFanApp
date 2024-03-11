@@ -1,5 +1,5 @@
 import 'package:app_haikyuu/src/layers/components/ListUsers-page.dart';
-import 'package:app_haikyuu/src/layers/widgets/appBarWidget.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/appBarWidget.dart';
 import 'package:flutter/material.dart';
 
 class KarasumoView extends StatefulWidget {

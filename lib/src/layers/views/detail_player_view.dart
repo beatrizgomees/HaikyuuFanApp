@@ -1,11 +1,10 @@
-import 'package:app_haikyuu/src/layers/components/hobbie_image_widget.dart';
-import 'package:app_haikyuu/src/layers/components/text_detail_player_widget.dart';
-import 'package:app_haikyuu/src/layers/shared/design/buttonStyleOutiled.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/hobbie_image_widget.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/text_detail_player_widget.dart';
 import 'package:app_haikyuu/src/layers/shared/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 import '../domain/entities/player.dart';
-import '../domain/repository/home_repository_imp.dart';
+import '../domain/repository/player_repository_imp.dart';
 
 class DetailView extends StatefulWidget {
   DetailView({super.key, required this.player});

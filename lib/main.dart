@@ -1,8 +1,10 @@
+import 'package:app_haikyuu/src/layers/domain/repository/player_repository_imp.dart';
 import 'package:app_haikyuu/src/layers/shared/constants/api_setting.dart';
 import 'package:app_haikyuu/src/layers/shared/themes/theme.dart';
 import 'package:app_haikyuu/src/layers/views/karasuno_view.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +13,14 @@ void main() async {
     url: ApiSettings.url,
     anonKey: ApiSettings.anonKey,
   );
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => PlayerRepositoryImp()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 final supabase = Supabase.instance.client;

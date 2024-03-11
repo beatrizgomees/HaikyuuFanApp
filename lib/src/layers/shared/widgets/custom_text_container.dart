@@ -1,12 +1,19 @@
 import 'package:app_haikyuu/src/layers/domain/entities/player.dart';
 import 'package:app_haikyuu/src/layers/shared/themes/theme.dart';
-import 'package:app_haikyuu/src/layers/widgets/custom_button_inside_of_card.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/custom_button_inside_of_card.dart';
 import 'package:flutter/material.dart';
 
-class CustomContentsTextContainer extends StatelessWidget {
+class CustomContentsTextContainer extends StatefulWidget {
   final Player player;
   const CustomContentsTextContainer({super.key, required this.player});
 
+  @override
+  State<CustomContentsTextContainer> createState() =>
+      _CustomContentsTextContainerState();
+}
+
+class _CustomContentsTextContainerState
+    extends State<CustomContentsTextContainer> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,7 +39,7 @@ class CustomContentsTextContainer extends StatelessWidget {
                       Center(
                         child: Text(
                           //Name
-                          player.name,
+                          widget.player.name,
                           style: textStyle,
                         ),
                       ),
@@ -44,7 +51,7 @@ class CustomContentsTextContainer extends StatelessWidget {
                 style: const ButtonStyle(),
                 onPressed: null,
                 child: Text(
-                  player.position,
+                  widget.player.position,
                   style: TextStyle(color: textDecoration.primaryColor),
                 ),
               ),
@@ -55,7 +62,7 @@ class CustomContentsTextContainer extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 5, right: 10),
                     child: CustomButtonInsideOfCardWidget(
-                      player: player,
+                      player: widget.player,
                       text: "Details",
                     ),
                   ),

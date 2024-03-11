@@ -1,8 +1,8 @@
 import 'package:app_haikyuu/src/layers/shared/themes/theme.dart';
-import 'package:app_haikyuu/src/layers/widgets/custom_avatar_widget.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/custom_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
-class CardMenu extends StatelessWidget {
+class CardMenu extends StatefulWidget {
   CardMenu({
     super.key,
     this.name,
@@ -17,6 +17,11 @@ class CardMenu extends StatelessWidget {
   final TextStyle? colorText;
 
   @override
+  State<CardMenu> createState() => _CardMenuState();
+}
+
+class _CardMenuState extends State<CardMenu> {
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: GestureDetector(
@@ -25,13 +30,13 @@ class CardMenu extends StatelessWidget {
           height: 100,
           width: 170,
           decoration: BoxDecoration(
-            color: color,
+            color: widget.color,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Center(
             child: Text(
-              name!,
-              style: colorText,
+              widget.name!,
+              style: widget.colorText,
             ),
           ),
         ),

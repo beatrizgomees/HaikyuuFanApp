@@ -1,14 +1,19 @@
 import 'package:app_haikyuu/src/layers/domain/entities/player.dart';
-import 'package:app_haikyuu/src/layers/widgets/custom_avatar_widget.dart';
+import 'package:app_haikyuu/src/layers/shared/widgets/custom_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../domain/repository/home_repository_imp.dart';
+import '../../domain/repository/player_repository_imp.dart';
 import '../themes/theme.dart';
 
-class ButtonStyleOutlined extends StatelessWidget {
+class ButtonStyleOutlined extends StatefulWidget {
   final Player player;
   ButtonStyleOutlined({super.key, required this.player});
 
+  @override
+  State<ButtonStyleOutlined> createState() => _ButtonStyleOutlinedState();
+}
+
+class _ButtonStyleOutlinedState extends State<ButtonStyleOutlined> {
   PlayerRepositoryImp playersRepositoryImp = PlayerRepositoryImp();
 
   @override
@@ -27,8 +32,8 @@ class ButtonStyleOutlined extends StatelessWidget {
                   color: themeCardButton.primaryColor,
                   borderRadius: BorderRadius.circular(20)),
               child: CustomAvatarWidget(
-                player: player,
-                image: playersRepositoryImp.urlImageSetting(player.name),
+                player: widget.player,
+                image: playersRepositoryImp.urlImageSetting(widget.player.name),
               ),
             ),
           ],

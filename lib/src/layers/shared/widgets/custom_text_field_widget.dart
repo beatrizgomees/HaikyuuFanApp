@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomTextFieldWidget extends StatelessWidget {
+class CustomTextFieldWidget extends StatefulWidget {
   final String label;
   final String hintText;
   final Image icon;
@@ -26,20 +26,25 @@ class CustomTextFieldWidget extends StatelessWidget {
   });
 
   @override
+  State<CustomTextFieldWidget> createState() => _CustomTextFieldWidgetState();
+}
+
+class _CustomTextFieldWidgetState extends State<CustomTextFieldWidget> {
+  @override
   Widget build(BuildContext context) {
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      validator: validator,
-      onSaved: onSaved,
-      onChanged: onChanged,
-      obscureText: obscureText,
+      validator: widget.validator,
+      onSaved: widget.onSaved,
+      onChanged: widget.onChanged,
+      obscureText: widget.obscureText,
       decoration: InputDecoration(
-        suffixIcon: suffix,
-        labelText: label,
-        hintText: hintText,
+        suffixIcon: widget.suffix,
+        labelText: widget.label,
+        hintText: widget.hintText,
         prefixIcon: Padding(
           padding: const EdgeInsets.all(10),
-          child: SizedBox(height: 5, width: 15, child: icon),
+          child: SizedBox(height: 5, width: 15, child: widget.icon),
         ),
         border: OutlineInputBorder(),
       ),
